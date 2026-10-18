@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sandro & Mirian · 13 de dezembro de 2026</title>
+<meta name="description" content="Sandro e Mirian vão se casar em 13 de dezembro de 2026. Venha celebrar conosco.">
+<meta property="og:title" content="Sandro & Mirian vão se casar">
+<meta property="og:description" content="13 de dezembro de 2026 · Venha celebrar conosco">
+<meta property="og:image" content="capa.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#fbf6ef; --paper:#fffdf9; --ink:#3a2a2a; --muted:#7a6666;
+  --wine:#7b2d3a; --wine-dark:#5d1f2b; --sunset:#d98a4e; --gold:#b98b4a; --line:#ead9c6;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Lato',sans-serif;font-weight:300;color:var(--ink);background:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.1}
+img{display:block;max-width:100%}
+a{color:inherit}
+
+/* topo */
+nav{position:fixed;inset:0 0 auto 0;z-index:20;display:flex;justify-content:center;gap:22px;padding:14px 16px;background:rgba(251,246,239,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase}
+nav a{text-decoration:none;color:var(--wine);font-weight:700}
+nav a:hover{color:var(--sunset)}
+
+/* capa */
+.hero{position:relative;min-height:100svh;display:grid;place-items:center;text-align:center;color:#fff;padding:90px 20px 60px;background:#3a2020 url(capa.webp) center 30%/cover}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(60,25,30,.55),rgba(60,25,30,.35) 45%,rgba(60,25,30,.75))}
+.hero > div{position:relative;max-width:760px}
+.eyebrow{font-size:.8rem;letter-spacing:.35em;text-transform:uppercase;opacity:.9}
+.hero h1{font-size:clamp(3.2rem,12vw,7rem);margin:14px 0 6px;font-weight:500}
+.hero h1 span{font-style:italic;color:#f3c58f;padding:0 .12em}
+.date{font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,4vw,2rem);font-style:italic}
+.count{display:flex;justify-content:center;gap:clamp(12px,4vw,34px);margin-top:34px}
+.count div{min-width:64px}
+.count b{display:block;font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,7vw,3.2rem);font-weight:500}
+.count small{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;opacity:.85}
+.btn{display:inline-block;margin-top:38px;padding:14px 34px;border:1px solid #fff;color:#fff;text-decoration:none;font-size:.78rem;letter-spacing:.25em;text-transform:uppercase;font-weight:700;transition:.25s}
+.btn:hover{background:#fff;color:var(--wine)}
+
+section{padding:96px 22px}
+.wrap{max-width:980px;margin:0 auto}
+.title{text-align:center;margin-bottom:46px}
+.title small{display:block;font-size:.76rem;letter-spacing:.32em;text-transform:uppercase;color:var(--sunset);font-weight:700;margin-bottom:10px}
+.title h2{font-size:clamp(2.3rem,6vw,3.6rem);color:var(--wine)}
+.title .orn{margin-top:14px;color:var(--gold);letter-spacing:.5em}
+
+/* história */
+.story{display:grid;gap:44px;grid-template-columns:1fr;align-items:center}
+@media(min-width:820px){.story{grid-template-columns:1fr 1fr;gap:64px}}
+.story .photos{position:relative}
+.story .photos img{border-radius:3px;box-shadow:0 18px 40px rgba(90,40,40,.2)}
+.story .photos .a{width:78%}
+.story .photos .b{width:52%;position:absolute;right:0;bottom:-34px;border:8px solid var(--paper)}
+.story p{font-size:1.06rem;margin-bottom:18px}
+.story p:first-letter{font-family:'Cormorant Garamond',serif;font-size:3.4rem;float:left;line-height:.85;padding:6px 10px 0 0;color:var(--wine)}
+.story .verse{margin-top:26px;padding-left:18px;border-left:2px solid var(--gold);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;color:var(--wine)}
+
+/* galeria */
+.alt{background:var(--paper);border-block:1px solid var(--line)}
+.gallery{columns:1;column-gap:16px}
+@media(min-width:560px){.gallery{columns:2}}
+@media(min-width:900px){.gallery{columns:3}}
+.gallery figure{break-inside:avoid;margin-bottom:16px;overflow:hidden;border-radius:3px;background:#eadfd2}
+.gallery img{width:100%;height:auto;cursor:zoom-in;transition:transform .5s}
+.gallery figure:hover img{transform:scale(1.03)}
+.note{text-align:center;margin-top:26px;color:var(--muted);font-style:italic}
+
+/* data */
+.when{text-align:center;max-width:620px;margin:0 auto}
+.when .big{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,7vw,3.6rem);color:var(--wine);line-height:1.15}
+.when p{margin-top:16px;color:var(--muted)}
+
+/* presentes */
+.gift{display:grid;gap:22px;grid-template-columns:1fr}
+@media(min-width:760px){.gift{grid-template-columns:1fr 1fr}}
+.card{background:var(--paper);border:1px solid var(--line);padding:38px 28px;text-align:center;border-radius:4px;box-shadow:0 8px 24px rgba(90,40,40,.06)}
+.card h3{font-size:1.9rem;color:var(--wine);margin-bottom:10px}
+.card p{color:var(--muted);margin-bottom:22px}
+.btn2{display:inline-block;padding:13px 28px;background:var(--wine);color:#fff;text-decoration:none;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;border:0;cursor:pointer;font-family:inherit;border-radius:2px;transition:.25s}
+.btn2:hover{background:var(--wine-dark)}
+.pix{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--ink);letter-spacing:.04em;margin:4px 0 18px;user-select:all}
+.ok{display:block;margin-top:12px;height:1.2em;font-size:.85rem;color:#3d7a4f;font-weight:700}
+
+
+/* confirmação */
+.rsvp{max-width:560px;margin:0 auto;background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:36px 28px;box-shadow:0 8px 24px rgba(90,40,40,.06)}
+.rsvp .aviso{background:#fbeede;border-left:3px solid var(--sunset);padding:14px 16px;margin-bottom:24px;font-size:.98rem}
+.rsvp label{display:block;font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--wine);margin:18px 0 6px}
+.rsvp input[type=text],.rsvp input[type=number]{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:2px;font:inherit;font-size:1rem;background:#fff;color:var(--ink)}
+.rsvp input:focus{outline:2px solid var(--sunset);outline-offset:1px}
+.rsvp .chk{display:flex;gap:10px;align-items:flex-start;margin-top:22px;font-size:.98rem}
+.rsvp .chk input{margin-top:5px;width:18px;height:18px;accent-color:var(--wine);flex:none}
+.rsvp .btn2{width:100%;margin-top:24px;padding:15px}
+.rsvp .erro{display:block;margin-top:10px;min-height:1.2em;font-size:.88rem;color:#a33;font-weight:700;text-align:center}
+.rsvp .total{display:block;margin-top:8px;font-weight:700;color:var(--wine)}
+.rsvp .passos{margin:0 0 6px 20px;color:var(--muted)}
+
+footer{text-align:center;padding:70px 20px;background:var(--wine-dark);color:#f6e8dc}
+footer h2{font-size:2.6rem;font-style:italic;font-weight:400}
+footer p{margin-top:10px;font-size:.85rem;letter-spacing:.2em;text-transform:uppercase;opacity:.8}
+
+/* ampliar foto */
+#lb{position:fixed;inset:0;z-index:50;background:rgba(30,12,14,.92);display:none;place-items:center;padding:20px;cursor:zoom-out}
+#lb.on{display:grid}
+#lb img{max-height:92vh;max-width:96vw;border-radius:3px}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#historia">História</a>
+  <a href="#fotos">Fotos</a>
+  <a href="#familia">Família</a>
+  <a href="#data">Data</a>
+  <a href="#confirmar">Confirmar</a>
+  <a href="#presentes">Presentes</a>
+</nav>
+
+<header class="hero">
+  <div>
+    <p class="eyebrow">Vamos nos casar</p>
+    <h1>Sandro<span>&</span>Mirian</h1>
+    <p class="date">13 de dezembro de 2026</p>
+    <div class="count" id="count" aria-label="Contagem regressiva">
+      <div><b id="d">--</b><small>dias</small></div>
+      <div><b id="h">--</b><small>horas</small></div>
+      <div><b id="m">--</b><small>min</small></div>
+      <div><b id="s">--</b><small>seg</small></div>
+    </div>
+    <a class="btn" href="#presentes">Lista de presentes</a>
+  </div>
+</header>
+
+<section id="historia">
+  <div class="wrap">
+    <div class="title"><small>Nossa história</small><h2>O tempo certo de Deus</h2><div class="orn">✦ ✦ ✦</div></div>
+    <div class="story">
+      <div class="photos">
+        <img class="a" src="sofa.webp" alt="Sandro e Mirian sorrindo juntos" loading="lazy">
+        <img class="b" src="buque2.webp" alt="Mirian com um buquê de flores ao lado de Sandro" loading="lazy">
+      </div>
+      <div>
+        <p>Faz muitos anos que o Sandro viu a Mirian pela primeira vez na igreja. Os dois seguiram a vida sem imaginar o que vinha pela frente, cada um no seu caminho, sem entender por que ainda não era a hora.</p>
+        <p>Foi nos almoços em família, na casa dela, que o tempo foi revelando aos poucos o que Deus já tinha preparado. Tão perto um do outro, sem saber que um dia aquela amizade viraria algo muito especial.</p>
+        <p>Hoje eles sabem que o verdadeiro amor chega no tempo certo e que nunca é tarde para amar. Mirian, mulher guerreira, mãe maravilhosa e amiga carinhosa, é para o Sandro uma bênção. Ele promete estar ao seu lado, amar, respeitar, proteger e cuidar dela e de todos que ela ama, com fé, carinho e alegria.</p>      </div>
+    </div>
+  </div>
+</section>
+
+<section id="fotos" class="alt">
+  <div class="wrap">
+    <div class="title"><small>Álbum</small><h2>Momentos nossos</h2><div class="orn">✦ ✦ ✦</div></div>
+    <div class="gallery" id="gal">
+      <figure><img src="brincadeira.webp" alt="Sandro fazendo careta ao lado de Mirian" loading="lazy"></figure>
+      <figure><img src="buque1.webp" alt="Sandro abraça Mirian que segura um buquê" loading="lazy"></figure>
+      <figure><img src="cachorrinho.webp" alt="O casal com um cachorrinho no colo" loading="lazy"></figure>
+      <figure><img src="sorriso.webp" alt="Mirian e Sandro sorrindo" loading="lazy"></figure>
+      <figure><img src="noite.webp" alt="O casal abraçado" loading="lazy"></figure>
+      <figure><img src="casa.webp" alt="O casal em casa" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section id="familia">
+  <div class="wrap">
+    <div class="title"><small>Família</small><h2>Nossa família</h2><div class="orn">✦ ✦ ✦</div></div>
+    <div class="gallery fam" id="gal2">
+      <figure><img src="familia.webp" alt="Sandro e Mirian com os filhos no carro" loading="lazy"></figure>
+      <figure><img src="mesa.webp" alt="A família reunida à mesa" loading="lazy"></figure>
+      <figure><img src="moldura.webp" alt="Sandro com os filhos em uma moldura de flores" loading="lazy"></figure>
+      <figure><img src="filha.webp" alt="Mirian com a filha" loading="lazy"></figure>
+      <figure><img src="sorvete.webp" alt="Os três filhos tomando sorvete" loading="lazy"></figure>
+      <figure><img src="filho1.webp" alt="Filho à mesa em um almoço de família" loading="lazy"></figure>
+      <figure><img src="sofapai.webp" alt="Sandro e os filhos fazendo sinal de joia" loading="lazy"></figure>
+      <figure><img src="filho2.webp" alt="Filho almoçando em casa" loading="lazy"></figure>
+      <figure><img src="pipoca.webp" alt="Sandro e os filhos com pipoca" loading="lazy"></figure>
+    </div>
+    <p class="note">Uma família que cresce com muito amor.</p>
+  </div>
+</section>
+
+<section id="data">
+  <div class="wrap when">
+    <div class="title"><small>Salve a data</small><h2>Celebre conosco</h2><div class="orn">✦ ✦ ✦</div></div>
+    <div class="big">Domingo<br>13 de dezembro de 2026</div>
+    <p><strong>10h30</strong> · Clube Comercial Taquara<br>R. Júlio de Castilhos, 2735 · Centro · Taquara/RS</p>
+    <a class="btn2" style="margin-top:22px" href="https://www.google.com/maps/search/?api=1&query=Clube%20Comercial%20R.%20J%C3%BAlio%20de%20Castilhos%2C%202735%20Taquara%20RS&query_place_id=ChIJ8Z57Ud4YGZUR-DtLwJDEwf8" target="_blank" rel="noopener">Ver no mapa</a>
+    <p>Sua presença vai deixar esse dia ainda mais especial.</p>
+  </div>
+</section>
+
+<section id="confirmar">
+  <div class="wrap">
+    <div class="title"><small>RSVP</small><h2>Confirme sua presença</h2><div class="orn">✦ ✦ ✦</div></div>
+    <form class="rsvp" id="rsvp" novalidate>
+      <div class="aviso"><strong>Importante:</strong> a confirmação de presença só é válida mediante o pagamento do buffet.<br><strong>Valor do buffet: R$ 60,00 por pessoa.</strong></div>
+      <ol class="passos">
+        <li>Pague o buffet pela chave Pix da seção <a href="#presentes">Presentes</a>.</li>
+        <li>Preencha os dados abaixo.</li>
+        <li>Envie a mensagem pelo WhatsApp junto com o comprovante.</li>
+      </ol>
+      <label for="nome">Seu nome completo</label>
+      <input type="text" id="nome" autocomplete="name" placeholder="Nome e sobrenome">
+      <label for="qtd">Quantas pessoas (contando você)</label>
+      <input type="number" id="qtd" min="1" max="20" value="1" inputmode="numeric">
+      <span class="total" id="total">Total do buffet: R$ 60,00</span>
+      <label for="nomes">Nome dos acompanhantes (se houver)</label>
+      <input type="text" id="nomes" placeholder="Ex.: Maria, João">
+      <label class="chk"><input type="checkbox" id="pago"> <span style="text-transform:none;letter-spacing:0;font-weight:400;font-size:.98rem;color:var(--ink)">Já fiz o pagamento do buffet e vou enviar o comprovante.</span></label>
+      <button class="btn2" type="submit">Confirmar pelo WhatsApp</button>
+      <span class="erro" id="erro" role="alert"></span>
+    </form>
+  </div>
+</section>
+
+<section id="presentes" class="alt">
+  <div class="wrap">
+    <div class="title"><small>Carinho</small><h2>Presentes</h2><div class="orn">✦ ✦ ✦</div></div>
+    <div class="gift">
+      <div class="card">
+        <h3>Lista de presentes</h3>
+        <p>Se quiser nos presentear, escolha um item da nossa lista.</p>
+        <a class="btn2" href="https://www.finalfeliz.de/mirian-santos--alexandro-rosa" target="_blank" rel="noopener">Ver a lista</a>
+      </div>
+      <div class="card">
+        <h3>Pix</h3>
+        <p>Para o presente em dinheiro ou para o pagamento do buffet (R$ 60,00 por pessoa).</p>
+        <div class="pix" id="pix">51 99601-8919</div>
+        <button class="btn2" id="copy" type="button">Copiar chave Pix</button>
+        <span class="ok" id="ok" role="status"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <h2>Sandro & Mirian</h2>
+  <p>Alexandro Rosa · Mirian Santos · 13.12.2026</p>
+</footer>
+
+<div id="lb" role="dialog" aria-label="Foto ampliada"><img alt=""></div>
+
+<script>
+// contagem regressiva (horário de Brasília)
+var alvo = new Date('2026-12-13T10:30:00-03:00').getTime();
+function tick(){
+  var t = Math.max(0, alvo - Date.now());
+  var p = function(n){return String(n).padStart(2,'0')};
+  document.getElementById('d').textContent = Math.floor(t/864e5);
+  document.getElementById('h').textContent = p(Math.floor(t%864e5/36e5));
+  document.getElementById('m').textContent = p(Math.floor(t%36e5/6e4));
+  document.getElementById('s').textContent = p(Math.floor(t%6e4/1e3));
+}
+tick(); setInterval(tick,1000);
+
+// copiar Pix (só os números)
+document.getElementById('copy').addEventListener('click', function(){
+  var chave = '51996018919', ok = document.getElementById('ok');
+  var done = function(){ ok.textContent = 'Chave Pix copiada!'; setTimeout(function(){ok.textContent=''},2500) };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(chave).then(done, function(){ ok.textContent = 'Chave: ' + chave });
+  } else { ok.textContent = 'Chave: ' + chave }
+});
+
+// ampliar fotos
+var lb = document.getElementById('lb'), lbi = lb.querySelector('img');
+['gal','gal2'].forEach(function(id){
+  document.getElementById(id).addEventListener('click', function(e){
+    if (e.target.tagName === 'IMG') { lbi.src = e.target.src; lbi.alt = e.target.alt; lb.classList.add('on') }
+  });
+});
+lb.addEventListener('click', function(){ lb.classList.remove('on') });
+document.addEventListener('keydown', function(e){ if (e.key === 'Escape') lb.classList.remove('on') });
+
+// confirmação de presença -> WhatsApp (altere o número aqui, só dígitos com DDI)
+var WHATS = '5551998656905', PRECO = 60;
+function reais(n){ return 'R$ ' + n.toFixed(2).replace('.', ',') }
+function atualizaTotal(){
+  var q = Math.max(1, parseInt(document.getElementById('qtd').value, 10) || 1);
+  document.getElementById('total').textContent = 'Total do buffet: ' + reais(q * PRECO);
+}
+document.getElementById('qtd').addEventListener('input', atualizaTotal);
+document.getElementById('rsvp').addEventListener('submit', function(e){
+  e.preventDefault();
+  var nome = document.getElementById('nome').value.trim(),
+      qtd = parseInt(document.getElementById('qtd').value, 10) || 1,
+      nomes = document.getElementById('nomes').value.trim(),
+      pago = document.getElementById('pago').checked,
+      erro = document.getElementById('erro');
+  if (nome.length < 3) { erro.textContent = 'Informe seu nome completo.'; return }
+  if (!pago) { erro.textContent = 'A presença só é confirmada após o pagamento do buffet. Marque a caixa depois de pagar.'; return }
+  erro.textContent = '';
+  var msg = 'Olá! Confirmo minha presença no casamento de Sandro e Mirian (13/12/2026).\n' +
+    'Nome: ' + nome + '\nPessoas: ' + qtd + (nomes ? '\nAcompanhantes: ' + nomes : '') +
+    '\nValor pago: ' + reais(qtd * PRECO) + ' (buffet via Pix). Segue o comprovante.';
+  window.open('https://wa.me/' + WHATS + '?text=' + encodeURIComponent(msg), '_blank');
+});
+</script>
+</body>
+</html>
