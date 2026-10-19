@@ -17,7 +17,7 @@
   --wine:#7b2d3a; --wine-dark:#5d1f2b; --sunset:#d98a4e; --gold:#b98b4a; --line:#ead9c6;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:hidden}
 body{font-family:'Lato',sans-serif;font-weight:300;color:var(--ink);background:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased}
 h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.1}
 img{display:block;max-width:100%}
@@ -58,17 +58,17 @@ section{padding:96px 22px}
 .story .photos .a{width:78%}
 .story .photos .b{width:52%;position:absolute;right:0;bottom:-34px;border:8px solid var(--paper)}
 .story p{font-size:1.06rem;margin-bottom:18px}
-.story p:first-letter{font-family:'Cormorant Garamond',serif;font-size:3.4rem;float:left;line-height:.85;padding:6px 10px 0 0;color:var(--wine)}
+.story p:first-of-type:first-letter{font-family:'Cormorant Garamond',serif;font-size:3.4rem;float:left;line-height:.85;padding:6px 10px 0 0;color:var(--wine)}
 .story .verse{margin-top:26px;padding-left:18px;border-left:2px solid var(--gold);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;color:var(--wine)}
 
 /* galeria */
 .alt{background:var(--paper);border-block:1px solid var(--line)}
-.gallery{columns:1;column-gap:16px}
-@media(min-width:560px){.gallery{columns:2}}
-@media(min-width:900px){.gallery{columns:3}}
-.gallery figure{break-inside:avoid;margin-bottom:16px;overflow:hidden;border-radius:3px;background:#eadfd2}
-.gallery img{width:100%;height:auto;cursor:zoom-in;transition:transform .5s}
-.gallery figure:hover img{transform:scale(1.03)}
+.gallery{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:4px 22px 16px;margin:0 -22px;scrollbar-width:thin;scrollbar-color:var(--gold) transparent}
+.gallery::-webkit-scrollbar{height:6px}
+.gallery::-webkit-scrollbar-thumb{background:var(--gold);border-radius:3px}
+.gallery figure{flex:0 0 auto;height:min(62vh,420px);scroll-snap-align:center;overflow:hidden;border-radius:4px;background:#eadfd2;box-shadow:0 8px 22px rgba(90,40,40,.14)}
+.gallery img{height:100%;width:auto;max-width:88vw;object-fit:cover;cursor:zoom-in}
+.swipe{text-align:center;margin-top:4px;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sunset);font-weight:700}
 .note{text-align:center;margin-top:26px;color:var(--muted);font-style:italic}
 
 /* data */
@@ -105,6 +105,30 @@ footer{text-align:center;padding:70px 20px;background:var(--wine-dark);color:#f6
 footer h2{font-size:2.6rem;font-style:italic;font-weight:400}
 footer p{margin-top:10px;font-size:.85rem;letter-spacing:.2em;text-transform:uppercase;opacity:.8}
 
+
+/* celular */
+nav{overflow-x:auto;white-space:nowrap;justify-content:flex-start;gap:20px;font-size:.7rem;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a:first-child{margin-left:auto}
+nav a:last-child{margin-right:auto}
+.hero .ph{display:none}
+@media(max-width:700px){
+  section{padding:52px 22px}
+  .title{margin-bottom:28px}
+  .hero{display:block;min-height:0;padding:0 0 46px;background:var(--wine-dark)}
+  .hero::before{display:none}
+  .hero .ph{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 28%;margin-top:46px}
+  .hero > div{padding:26px 20px 0}
+  .hero h1{font-size:clamp(2.3rem,12vw,4rem)}
+  .count{margin-top:22px}
+  .btn{margin-top:26px;padding:13px 26px}
+  .story{gap:34px}
+  .story > div:last-child{order:-1}
+  .story .photos{margin-bottom:34px}
+  .gallery figure{height:340px}
+  .card,.rsvp{padding:28px 20px}
+}
+
 /* ampliar foto */
 #lb{position:fixed;inset:0;z-index:50;background:rgba(30,12,14,.92);display:none;place-items:center;padding:20px;cursor:zoom-out}
 #lb.on{display:grid}
@@ -123,6 +147,7 @@ footer p{margin-top:10px;font-size:.85rem;letter-spacing:.2em;text-transform:upp
 </nav>
 
 <header class="hero">
+  <img class="ph" src="capa.webp" alt="Sandro e Mirian">
   <div>
     <p class="eyebrow">Vamos nos casar</p>
     <h1>Sandro<span>&</span>Mirian</h1>
@@ -146,9 +171,9 @@ footer p{margin-top:10px;font-size:.85rem;letter-spacing:.2em;text-transform:upp
         <img class="b" src="buque2.webp" alt="Mirian com um buquê de flores ao lado de Sandro" loading="lazy">
       </div>
       <div>
-        <p>Faz muitos anos que o Sandro viu a Mirian pela primeira vez na igreja. Os dois seguiram a vida sem imaginar o que vinha pela frente, cada um no seu caminho, sem entender por que ainda não era a hora.</p>
+        <p>Faz muitos anos que eles se viram pela primeira vez na igreja. Os dois seguiram a vida sem imaginar o que vinha pela frente, cada um no seu caminho, sem entender por que ainda não era a hora.</p>
         <p>Foi nos almoços em família, na casa dela, que o tempo foi revelando aos poucos o que Deus já tinha preparado. Tão perto um do outro, sem saber que um dia aquela amizade viraria algo muito especial.</p>
-        <p>Hoje eles sabem que o verdadeiro amor chega no tempo certo e que nunca é tarde para amar. Mirian, mulher guerreira, mãe maravilhosa e amiga carinhosa, é para o Sandro uma bênção. Ele promete estar ao seu lado, amar, respeitar, proteger e cuidar dela e de todos que ela ama, com fé, carinho e alegria.</p>      </div>
+        <p>Hoje eles sabem que o verdadeiro amor chega no tempo certo e que nunca é tarde para amar. Ela, mulher guerreira, mãe maravilhosa e amiga carinhosa; ele, o companheiro que escolheu caminhar ao seu lado. Juntos, prometem amar, respeitar, proteger e cuidar um do outro e de todos que fazem parte da família, com fé, carinho e alegria.</p>      </div>
     </div>
   </div>
 </section>
@@ -164,6 +189,7 @@ footer p{margin-top:10px;font-size:.85rem;letter-spacing:.2em;text-transform:upp
       <figure><img src="noite.webp" alt="O casal abraçado" loading="lazy"></figure>
       <figure><img src="casa.webp" alt="O casal em casa" loading="lazy"></figure>
     </div>
+    <p class="swipe">Deslize para o lado →</p>
   </div>
 </section>
 
@@ -181,6 +207,7 @@ footer p{margin-top:10px;font-size:.85rem;letter-spacing:.2em;text-transform:upp
       <figure><img src="filho2.webp" alt="Filho almoçando em casa" loading="lazy"></figure>
       <figure><img src="pipoca.webp" alt="Sandro e os filhos com pipoca" loading="lazy"></figure>
     </div>
+    <p class="swipe">Deslize para o lado →</p>
     <p class="note">Uma família que cresce com muito amor.</p>
   </div>
 </section>
