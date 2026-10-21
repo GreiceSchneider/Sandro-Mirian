@@ -74,7 +74,12 @@ section{padding:96px 22px}
 /* data */
 .when{text-align:center;max-width:620px;margin:0 auto}
 .when .big{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,7vw,3.6rem);color:var(--wine);line-height:1.15}
-.when p{margin-top:16px;color:var(--muted)}
+.when p{margin-top:12px;color:var(--muted)}
+.when .big{font-size:clamp(1.8rem,6vw,2.8rem)}
+.maplink{display:inline-block;margin-top:6px;color:var(--wine);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem}
+.sub{font-size:clamp(1.8rem,5vw,2.4rem);color:var(--wine);text-align:center;margin:40px 0 18px;scroll-margin-top:70px}
+section[id]{scroll-margin-top:52px}
+
 
 /* presentes */
 .gift{display:grid;gap:22px;grid-template-columns:1fr}
@@ -140,9 +145,7 @@ nav a:last-child{margin-right:auto}
 <nav>
   <a href="#historia">História</a>
   <a href="#fotos">Fotos</a>
-  <a href="#familia">Família</a>
-  <a href="#data">Data</a>
-  <a href="#confirmar">Confirmar</a>
+  <a href="#data">Data e confirmação</a>
   <a href="#presentes">Presentes</a>
 </nav>
 
@@ -178,9 +181,17 @@ nav a:last-child{margin-right:auto}
   </div>
 </section>
 
+<section id="musica">
+  <div class="wrap" style="max-width:640px">
+    <div class="title"><small>Nossa música</small><h2>You're Still the One</h2><div class="orn">✦ ✦ ✦</div></div>
+    <iframe title="Nossa música no Spotify" style="border:0;border-radius:12px;width:100%;height:152px" src="https://open.spotify.com/embed/track/76VS8DvE4TCe5pHYp02Qwo?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <p class="note">Toque em ▶ para ouvir.</p>
+  </div>
+</section>
+
 <section id="fotos" class="alt">
   <div class="wrap">
-    <div class="title"><small>Álbum</small><h2>Momentos nossos</h2><div class="orn">✦ ✦ ✦</div></div>
+    <div class="title"><small>Álbum</small><h2>Nossos momentos</h2><div class="orn">✦ ✦ ✦</div></div>
     <div class="gallery" id="gal">
       <figure><img src="brincadeira.webp" alt="Sandro fazendo careta ao lado de Mirian" loading="lazy"></figure>
       <figure><img src="buque1.webp" alt="Sandro abraça Mirian que segura um buquê" loading="lazy"></figure>
@@ -188,15 +199,6 @@ nav a:last-child{margin-right:auto}
       <figure><img src="sorriso.webp" alt="Mirian e Sandro sorrindo" loading="lazy"></figure>
       <figure><img src="noite.webp" alt="O casal abraçado" loading="lazy"></figure>
       <figure><img src="casa.webp" alt="O casal em casa" loading="lazy"></figure>
-    </div>
-    <p class="swipe">Deslize para o lado →</p>
-  </div>
-</section>
-
-<section id="familia">
-  <div class="wrap">
-    <div class="title"><small>Família</small><h2>Nossa família</h2><div class="orn">✦ ✦ ✦</div></div>
-    <div class="gallery fam" id="gal2">
       <figure><img src="familia.webp" alt="Sandro e Mirian com os filhos no carro" loading="lazy"></figure>
       <figure><img src="mesa.webp" alt="A família reunida à mesa" loading="lazy"></figure>
       <figure><img src="moldura.webp" alt="Sandro com os filhos em uma moldura de flores" loading="lazy"></figure>
@@ -208,25 +210,19 @@ nav a:last-child{margin-right:auto}
       <figure><img src="pipoca.webp" alt="Sandro e os filhos com pipoca" loading="lazy"></figure>
     </div>
     <p class="swipe">Deslize para o lado →</p>
-    <p class="note">Uma família que cresce com muito amor.</p>
   </div>
 </section>
 
 <section id="data">
-  <div class="wrap when">
-    <div class="title"><small>Salve a data</small><h2>Celebre conosco</h2><div class="orn">✦ ✦ ✦</div></div>
-    <div class="big">Domingo<br>13 de dezembro de 2026</div>
-    <p><strong>10h30</strong> · Clube Comercial Taquara<br>R. Júlio de Castilhos, 2735 · Centro · Taquara/RS</p>
-    <a class="btn2" style="margin-top:22px" href="https://www.google.com/maps/search/?api=1&query=Clube%20Comercial%20R.%20J%C3%BAlio%20de%20Castilhos%2C%202735%20Taquara%20RS&query_place_id=ChIJ8Z57Ud4YGZUR-DtLwJDEwf8" target="_blank" rel="noopener">Ver no mapa</a>
-    <p>Sua presença vai deixar esse dia ainda mais especial.</p>
-  </div>
-</section>
-
-<section id="confirmar">
   <div class="wrap">
-    <div class="title"><small>RSVP</small><h2>Confirme sua presença</h2><div class="orn">✦ ✦ ✦</div></div>
+    <div class="title"><small>Salve a data</small><h2>Celebre conosco</h2><div class="orn">✦ ✦ ✦</div></div>
+    <div class="when">
+      <div class="big">Domingo, 13 de dezembro de 2026</div>
+      <p><strong>10h30</strong> · Clube Comercial Taquara<br>R. Júlio de Castilhos, 2735 · Centro · Taquara/RS<br><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Clube%20Comercial%20R.%20J%C3%BAlio%20de%20Castilhos%2C%202735%20Taquara%20RS&query_place_id=ChIJ8Z57Ud4YGZUR-DtLwJDEwf8" target="_blank" rel="noopener">Ver no mapa</a></p>
+    </div>
+    <h3 class="sub" id="confirmar">Confirme sua presença</h3>
     <form class="rsvp" id="rsvp" novalidate>
-      <div class="aviso"><strong>Importante:</strong> a confirmação de presença só é válida mediante o pagamento do buffet.<br><strong>Valor do buffet: R$ 60,00 por pessoa.</strong></div>
+      <div class="aviso"><strong>Importante:</strong> a confirmação de presença só é válida mediante o pagamento do buffet.<br><strong>Valor do buffet: R$ 55,00 por pessoa.</strong><br>Crianças até 5 anos não pagam · de 6 a 9 anos pagam meia (R$ 27,50) · a partir de 10 anos pagam inteira.</div>
       <ol class="passos">
         <li>Pague o buffet pela chave Pix da seção <a href="#presentes">Presentes</a>.</li>
         <li>Preencha os dados abaixo.</li>
@@ -234,9 +230,13 @@ nav a:last-child{margin-right:auto}
       </ol>
       <label for="nome">Seu nome completo</label>
       <input type="text" id="nome" autocomplete="name" placeholder="Nome e sobrenome">
-      <label for="qtd">Quantas pessoas (contando você)</label>
-      <input type="number" id="qtd" min="1" max="20" value="1" inputmode="numeric">
-      <span class="total" id="total">Total do buffet: R$ 60,00</span>
+      <label for="qa">Pessoas a partir de 10 anos (contando você) · R$ 55,00 cada</label>
+      <input type="number" id="qa" min="0" max="20" value="1" inputmode="numeric">
+      <label for="qm">Crianças de 6 a 9 anos · meia, R$ 27,50 cada</label>
+      <input type="number" id="qm" min="0" max="20" value="0" inputmode="numeric">
+      <label for="qc">Crianças até 5 anos · não pagam</label>
+      <input type="number" id="qc" min="0" max="20" value="0" inputmode="numeric">
+      <span class="total" id="total">Total do buffet: R$ 55,00</span>
       <label for="nomes">Nome dos acompanhantes (se houver)</label>
       <input type="text" id="nomes" placeholder="Ex.: Maria, João">
       <label class="chk"><input type="checkbox" id="pago"> <span style="text-transform:none;letter-spacing:0;font-weight:400;font-size:.98rem;color:var(--ink)">Já fiz o pagamento do buffet e vou enviar o comprovante.</span></label>
@@ -257,7 +257,7 @@ nav a:last-child{margin-right:auto}
       </div>
       <div class="card">
         <h3>Pix</h3>
-        <p>Para o presente em dinheiro ou para o pagamento do buffet (R$ 60,00 por pessoa).</p>
+        <p>Para o presente em dinheiro ou para o pagamento do buffet (R$ 55,00 por pessoa; crianças até 5 anos não pagam e de 6 a 9 anos pagam meia).</p>
         <div class="pix" id="pix">51 99601-8919</div>
         <button class="btn2" id="copy" type="button">Copiar chave Pix</button>
         <span class="ok" id="ok" role="status"></span>
@@ -297,7 +297,7 @@ document.getElementById('copy').addEventListener('click', function(){
 
 // ampliar fotos
 var lb = document.getElementById('lb'), lbi = lb.querySelector('img');
-['gal','gal2'].forEach(function(id){
+['gal'].forEach(function(id){
   document.getElementById(id).addEventListener('click', function(e){
     if (e.target.tagName === 'IMG') { lbi.src = e.target.src; lbi.alt = e.target.alt; lb.classList.add('on') }
   });
@@ -306,26 +306,34 @@ lb.addEventListener('click', function(){ lb.classList.remove('on') });
 document.addEventListener('keydown', function(e){ if (e.key === 'Escape') lb.classList.remove('on') });
 
 // confirmação de presença -> WhatsApp (altere o número aqui, só dígitos com DDI)
-var WHATS = '5551998656905', PRECO = 60;
+var WHATS = '5551998656905', PRECO = 55;
 function reais(n){ return 'R$ ' + n.toFixed(2).replace('.', ',') }
-function atualizaTotal(){
-  var q = Math.max(1, parseInt(document.getElementById('qtd').value, 10) || 1);
-  document.getElementById('total').textContent = 'Total do buffet: ' + reais(q * PRECO);
+function num(id){ return Math.max(0, parseInt(document.getElementById(id).value, 10) || 0) }
+function calc(){
+  var a = num('qa'), m = num('qm'), c = num('qc');
+  return { a:a, m:m, c:c, pessoas:a+m+c, total:a*PRECO + m*PRECO/2 };
 }
-document.getElementById('qtd').addEventListener('input', atualizaTotal);
+function atualizaTotal(){
+  document.getElementById('total').textContent = 'Total do buffet: ' + reais(calc().total);
+}
+['qa','qm','qc'].forEach(function(id){ document.getElementById(id).addEventListener('input', atualizaTotal) });
+atualizaTotal();
+
 document.getElementById('rsvp').addEventListener('submit', function(e){
   e.preventDefault();
   var nome = document.getElementById('nome').value.trim(),
-      qtd = parseInt(document.getElementById('qtd').value, 10) || 1,
       nomes = document.getElementById('nomes').value.trim(),
       pago = document.getElementById('pago').checked,
-      erro = document.getElementById('erro');
+      erro = document.getElementById('erro'), q = calc();
   if (nome.length < 3) { erro.textContent = 'Informe seu nome completo.'; return }
+  if (q.pessoas < 1) { erro.textContent = 'Informe quantas pessoas vão.'; return }
   if (!pago) { erro.textContent = 'A presença só é confirmada após o pagamento do buffet. Marque a caixa depois de pagar.'; return }
   erro.textContent = '';
   var msg = 'Olá! Confirmo minha presença no casamento de Sandro e Mirian (13/12/2026).\n' +
-    'Nome: ' + nome + '\nPessoas: ' + qtd + (nomes ? '\nAcompanhantes: ' + nomes : '') +
-    '\nValor pago: ' + reais(qtd * PRECO) + ' (buffet via Pix). Segue o comprovante.';
+    'Nome: ' + nome + '\nTotal de pessoas: ' + q.pessoas +
+    '\n- A partir de 10 anos: ' + q.a + '\n- 6 a 9 anos (meia): ' + q.m + '\n- Até 5 anos (grátis): ' + q.c +
+    (nomes ? '\nAcompanhantes: ' + nomes : '') +
+    '\nValor pago: ' + reais(q.total) + ' (buffet via Pix). Segue o comprovante.';
   window.open('https://wa.me/' + WHATS + '?text=' + encodeURIComponent(msg), '_blank');
 });
 </script>
